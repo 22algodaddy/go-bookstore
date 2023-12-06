@@ -60,7 +60,7 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	utils.ParseBody(r, updateBook)
 	vars := mux.Vars(r)
 	bookId := vars["bookId"]
-	Id, err := strconv.ParseInt(bookId, 0, 0)
+	ID, err := strconv.ParseInt(bookId, 0, 0)
 	if err != nil {
 		fmt.Println("error while parsing")
 	}
