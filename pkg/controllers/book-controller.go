@@ -43,7 +43,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 	w.Write(res)
 }
 func DeleteBook(w http.ResponseWriter, r *http.Request) {
-	vars := mux.vars(r)
+	vars := mux.Vars(r)
 	bookId := vars["bookId"] //vars used to extract book ID from the JSON
 	ID, err := strconv.ParseInt(bookId, 0, 0)
 	if err != nil {
